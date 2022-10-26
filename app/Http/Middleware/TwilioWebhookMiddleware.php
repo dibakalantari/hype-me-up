@@ -20,12 +20,22 @@ class TwilioWebhookMiddleware
     {
         $requestValidator = new RequestValidator(config('twilio.auth_token'));
 
+        $requestData = $request->post();
+
+        if (array_key_exists('bodySHA256', $requestData)) {
+            $requestData = $request->getContent();
+        }
+
         $isValid = $requestValidator->validate(
             $request->header('X-Twilio-Signature'),
             $request->fullUrl(),
-            $request->post()
+            $requestData
         );
 
-        abort_unless($isValid, 401);
+        if ($isValid) {
+            return $next($request);
+        }
+
+        abort(401, 'You are not Twilio!');
     }
 }
