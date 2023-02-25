@@ -2,7 +2,7 @@
 
 This project was for Twilio Developer Voices on September 2022. The mission was to choose one of the of the available themes, and write a code and tutorial of that code for Twilio blog. 
 
-This was the theme that this project was based on :
+This is the theme that this project is based on :
 
 > December: Gift of Code
 > 
@@ -11,9 +11,9 @@ This was the theme that this project was based on :
 And basically this gift sends an inspirational quote to that special someone every day, but in order to avoid getting boring it does it through different communication channels: -call -SMS -Email
 Which I have used Twilio products for.
 
-Here is the link to the tutorial of this project:
+Here is the link to the Twilio article that I have written as a tutorial for this project:
 
-https://docs.google.com/document/d/1GoNtCnmlQpxxd-SmiO3td0KWVHx24Yw-Oiy44iIBZSc/edit#heading=h.jk5b6tce0pp6 
+https://www.twilio.com/blog/hype-someone-this-christmas-laravel-sail-twilio-programmable-voice-sendgrid
 
 And in order to run this project all you have to do is:
 
